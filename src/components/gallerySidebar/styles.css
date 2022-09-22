@@ -1,0 +1,43 @@
+.closeModal {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    user-select: none;
+
+    transition: color 0.5s;
+}
+
+.closeModal:hover {
+    color: var(--Orange);
+}
+
+.modalProduct {
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalProduct .content_modal {
+    max-width: 30%;
+}
+
+@media (max-width: 600px) {
+    .modalProduct .content_modal {
+        max-width: 100%;
+    }
+}

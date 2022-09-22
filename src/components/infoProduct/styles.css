@@ -1,0 +1,88 @@
+.infoProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.infoProduct_subtitle {
+    color: var(--Orange);
+}
+
+.infoProduct_paragraph {
+    color: var(--Grayishblue);
+    line-height: 1.5rem;
+}
+
+.infoProduct_price .withPercent {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.infoProduct_price .Percent {
+    display: inline-block;
+    color: var(--Orange);
+    background-color: var(--Paleorange);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.infoProduct_price .withNoPercent {
+    color: var(--Grayishblue);
+}
+
+.optionsCart {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    height: 40px;
+
+    user-select: none;
+}
+
+.optionsCart .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.5rem;
+
+    background-color: var(--Lightgrayishblue);
+}
+
+.optionsCart .boxAddCart {
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: flex;
+    background-color: var(--Orange);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .infoProduct_price {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 1rem;
+    }
+
+    .infoProduct_price .withPercent {
+        margin-right: 0;
+        align-self: center;
+    }
+
+    .infoProduct_price .withNoPercent {
+        align-self: center;
+        text-align: end;
+    }
+
+    .optionsCart {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 100px;
+    }
+}
